@@ -1,51 +1,104 @@
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li a {
-    display: block;
-    padding: 8px 16px;
-    margin: 12px;
-}
-nav li a.button:hover {
-    color: black;
-    border: 4px solid green;
-}
-
-header {
-    font-size: 250%;
-    text-shadow: 4px 3px 4px rgb(50, 50, 196);
-    border: 5px dashed darkgreen;
+.hero {
+    background-color: #d3c3a2;
+    background-image: url("../images/20220930_065019_v2.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: 50vh;
     padding: 1em;
-    margin: 1.5em;
-    padding: .4em;
-    margin: .6em;
     color: lightblue;
     text-align: center;
-    background-image: url("../images/20220930_065019_v2.jpg");
-    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    grid-column: 1 / -1;
+}
+
+.hero>h1 {
+    font-size: 64px;
+    text-shadow: rgba(25, 12, 146, 0.432) 2px 5px;
+}
+
+.hero>p {
+    font-size: 22px;
+}
+
+article {
+    grid-column: 1 / -1;
+    background-color: #1a79d1;
+    color: lightblue;
+}
+
+.middle {
+    border-bottom: 3px solid black;
+    width: 60vw;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+#selfie {
+    width: 15em;
+    height: 30em;
+    background-image: url("../images/rn_image_picker_lib_temp_2964bb29-91aa-4cc8-8e98-38598c289bbe.jpg");
     background-size: cover;
-    clear: both;
-
 }
 
-#wrapper {
-    width: 68vw;
-    margin: 0 auto;
-    border: 3px solid blue;
-    background-color: rgb(174, 207, 226);
+.flexContainer {
+    display: flex;
+    justify-content: center;
 }
 
-#resume {
-    margin: auto;
+.BioImage {
+    flex-basis: 0vw;
 }
 
-main,footer {
-    border: 5px dashed blue;
-    padding: 1em;
-    margin: 1.5em;
+.about, .CoverLetterContent, .CareerGoalContent {
+    flex-basis: 40vw;
+    margin: 1rem;
+    font-size: 22px;
+}
+
+.screenmiddle {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cas {
+    width: 50%;
+}
+
+#CoverLetter {
+    background-color: darkblue;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+#workSamples {
+    padding: 10rem 20rem;
+    background-color: rgb(28, 40, 109);
+}
+
+.workSampleImages {
+    width: 50%;
+}
+
+#capstone {
+    background-color: rgb(0, 46, 0);
+    height: 4750px;
+}
+
+#capstone h1, #capstone h2 {
+    color: greenyellow
+}
+
+#toc ul a {
+    color: tan;
+    font-size: 20px;
 }
 
 .button {
@@ -59,48 +112,55 @@ main,footer {
     box-shadow: 5px 5px 6px blue;
 }
 
-footer p a.button:hover {
-    color: lightblue;
-    border: 4px solid green;
-}
-
-section {
-    border: 3px dashed purple;
-    margin: 1.5em;
-    padding: 1em;
-}
-
-#horizontal ul li {
-    float: left;
-}
-
 #horizontal {
-    background-color: rgb(68, 68, 207);
+    background-color:rgb(77, 77, 216);
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    width: 1024;
-    margin-bottom: 32px;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+#horizontal>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 #horizontal li a{
     text-decoration: none;
-    color: bisque;
-    text-align: center;
-    display: block;
-    padding: .8em 1em;
+    display: inline-block;
+    color: turquoise;
     margin: 0;
+    padding: .8rem 1rem;
 }
 
-#horiontal>ul{
-    width: 85%;
-    margin: 0 auto;
+#horizontal li a:hover:not(.current) {
+    color: black;
+    background: white;
+    border-radius: 12px;
 }
-
-#horizontal li a:hover:not(.current), #horizontal li a:focus:not(.current) {
-    background-color: blueviolet;
-}
-
 .current {
-    background-color: black;
+    background-color: blue;
+    border-radius: 12px;
+}
+
+#resume {
+    height: 150vh;
+    background-color: rgb(29, 143, 158);
+}
+
+footer {
+    background-color: #d3c3a2;
+    padding: 2rem 1rem;
+}
+
+footer p a.button:hover {
+    color: lightblue;
+    border: 4px solid green;
 }

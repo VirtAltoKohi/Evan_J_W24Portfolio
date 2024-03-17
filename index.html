@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/home.css">
-    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <title>Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <style>
         body {
             background-color: grey;
@@ -18,52 +19,178 @@
                 <li><a href="#" class="current">Home</a></li>
                 <li><a href="#bio">Bio</a></li>
                 <li><a href="#resume">Resume</a></li>
-                <li><a href="#coverLetter">coverLetter</a></li>
-                <li><a href="#careerGoal">careerGoal</a></li>
+                <li><a href="#coverAndStatement">Cover & Statement</a></li>
+                <li><a href="#academicWorkSamples">Work Samples</a></li>
+                <li><a href="#capstone">Capstone</a></li>
             </ul>
         </nav>
-        <header>
-            <h1>Evan James</h1>
-        </header>
-        <main>
-            <aside>
-                <div id="PersonalData">
-                    <section id="bio">
-                        <h2>Bio</h2>
-                        <p>Hi, my name is Evan James</p>
-                    </section>
-                    <section id="resume">
-                        <h2>Resume</h2>
-                        <object
-                            type="application/pdf"
-                            data="assets/pdfs/Summer Internship 2024.pdf"
-                            width="600"
-                            height="800"
-                            >
-                        </object>
-                    </section>
-                    <section id="coverLetter">
-                        <h2>Cover Letter</h2>
-                    </section>
-                    <section id="careerGoal">
-                        <h2>Statement of Career Goal</h2>
-                    </section>
-                </div>
-                <div id="AcademicCredentials">
-                    
-                </div>
-                <div id="AcademicWorkExperience">
-
-                </div>
-                <div id="ProfessionalSummary">
-
-                </div>
-            </aside>
+        
+        <main class="hero">
+            <p>Where projects come to life, and passions realized.</p>
+            <h1>Evan J's Portfolio Site</h1>                
         </main>
+
+        <article id="bio" class="screenmiddle">
+            <h2 class="middle">Bio</h2>
+            <div class="flexContainer">
+                <div class="BioImage">
+                    <p id="selfie"></p>
+                </div>
+                <div class="about">
+                    <p>Hi the names Evan James. A software engineering student at George brown
+                        College, soon to be graduate. A civalized individual who enjoys persuing
+                        many differing types of hobbies outside of software engineering.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <article id="resume" class="screenmiddle">
+            <h2 class="middle">Resume</h2>
+            <object 
+                data="assets/pdfs/Summer Internship 2024.pdf"
+                type="application/pdf"
+                width="40%"
+                height="1200px"></object>
+        </article>
+
+        <article id="coverAndStatement" class="screenmiddle"> 
+            <div class="flexContainer">
+                <div id="CoverLetter"class="cas">
+                    <h2>Cover Letter</h2>
+                    <div class="CoverLetterContent">
+                        <object 
+                        data="assets/pdfs/Dear Hiring Manager.pdf"
+                        type="application/pdf"
+                        width="100%"
+                        height="300px"></object>
+                    </div>
+                </div>
+                <div class="cas">
+                    <h2>Career Goal Statement</h2>
+                    <div class="CareerGoalContent">
+                        <p>
+                            I want to create a career goal that reflects my vision for my future,
+                            my strengths, and weaknesses, and my action to plan to acheive it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <article id="academicCredentials" class="screenmiddle">
+            <div>
+                <h2 class="middle">Academic Credentials</h2>
+                <h2>George Brown College Casa Loma - Computer Programming & Analysis</h2>
+            </div>
+        </article>
+
+        <article id="academicWorkSamples">
+            <div id="workSamples">
+                <h1 class="middle">Academic Work Samples</h1>
+                <div class="workSamples">
+                    <h1>Example #1: Weather App Lab Test</h1>
+                    <img class="workSampleImages" src="assets/images/Screenshot_1.png" alt="">
+                    <p>
+                        Place holder
+                    </p>
+                </div>
+                <div class="workSamples">
+                    <h1>Example #2: Employee Management System</h1>
+                    <img src="assets/images/Employee_List.png" alt="" class="workSampleImages">
+                    <p>
+                        Place holder
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <article id="capstone" class="screenmiddle">
+            <h1 class="middle">Capstone Project</h1>
+            <h2>Table of contents</h2>
+            <div id="toc">
+                <ul><a href="#summary">Project Summary</a></ul>
+                <ul><a href="#vision">Project Vision</a></ul>
+                <ul><a href="#BusinessRequirements">Project/Business Requrements</a></ul>
+                <ul><a href="#Plan">Project Plan</a></ul>
+                <ul><a href="#Requirements">Requirements Analysis and Design</a></ul>
+                <ul><a href="#wireframes">Wireframes/Mock ups</a></ul>
+                <ul><a href="#SystemImplementation">System Implementation</a></ul>
+            </div>
+            <div id="summary">
+                <h1 class="middle">Project Summary</h1>
+                <p class="about" style="width: 50%; text-align: center; margin: auto;">
+                    SneakerXplorer, is a sneaker deal tracking website for the purpose of
+                    finding the best deals on sneakers in Canada. Providing the user with
+                    search functionality, release calendar, and more. So, you may never miss
+                    a deal on a pair of sneakers ever again.
+                </p>
+            </div>
+            <div id="vision">
+                <h1 class="middle">Project Vision</h1>
+                <div class="document">
+                    <object 
+                    data="assets/pdfs/SneakerXComp - Project Vision.docx.pdf"
+                    type="application/pdf"
+                    width="60%"
+                    height="800px"></object>
+                </div>
+                
+                <p>
+                    Placeholder
+                </p>
+            </div>
+            <div id="BusinessRequirements">
+                <h1 class="middle">Project/Business Requirements</h1>
+                <img src="assets/images/Business Context Diagram SneakerXplorer.png" alt="">
+                <p>
+                    Placeholder
+                </p>
+            </div>
+            <div id="Plan">
+                <h1 class="middle">Project Plan</h1>
+                <div class="document">
+                    <object 
+                    data="assets/pdfs/SneakerXplorer- Revised Project Plan.docx.pdf"
+                    type="application/pdf"
+                    width="60%"
+                    height="800px"></object>
+                <p>
+                    Placeholder
+                </p>
+            </div>
+            <div id="Requirements">
+                <h1 class="middle">Requirements Analysis and Design</h1>
+                <div class="document">
+                    <object 
+                    data="assets/pdfs/SneakerXplore High Level Requirements.docx.pdf"
+                    type="application/pdf"
+                    width="60%"
+                    height="800px"></object>
+                <p>
+                    Placeholder
+                </p>
+            </div>
+            <div id="Wireframes">
+                <h1 class="middle">Wireframes</h1>
+                <div>
+                    <img src="assets/images/Screenshot 2024-03-17 162238.png" alt="" width="50%">
+                </div>
+                <a href="https://www.figma.com/file/wklp4ftbMvQunQ8rHL5Q8q/SneakerXplore?type=design&node-id=0%3A1&mode=design&t=cTnUavrFg6sV8eYc-1">Wireframes Figma Link</a>
+            </div>
+            <div id="SystemImplementation">
+                <h1 class="middle">System Implementationn</h1>
+                <p>
+                    Placeholder
+                </p>
+            </div>
+        </article>
+
         <footer>
             <p><a class="button" href="#">Go to the top of the page</a></p>
             <p>&copy;Evan James, 2024</p>
         </footer>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
     </div>
 </body>
 </html>
